@@ -11,8 +11,17 @@ Here are links into the Google Groups archive:
 - [New marker: "this database is unambiguous"](https://groups.google.com/g/metamath/c/wtZhLZT6IpI/m/NbUBsn9kBAAJ)
 - [Minimalist Metamath](https://groups.google.com/g/metamath/c/8QJqoFgMXhE/m/07Q60TflBwAJ)
 
-The parsing algorithm assumes there is a `... $a TOP xyzzy ... $.` axiom for each typecode.
-It works as follows:
+The parsing algorithm only assumes
+there is a `... $a TOP xyzzy ... $.` axiom for each typecode;
+and that the syntax is expressed in typecodes
+that start with a lowercase letter (like `wff`, `setvar`, and `class`).
+
+Apart from these new 'syntax axioms', nothing new is needed:
+no Metamath language extensions,
+and no `$j` comments for `syntax`, `garden_path`, `type_conversions`
+(which [metamath-knife](https://github.com/david-a-wheeler/metamath-knife) relies on).
+
+The algorithm works as follows:
 
 * For every statement expression like `|- x y z z y`,
 * find the unique proof for `TOP |- x y z z y`
@@ -24,7 +33,7 @@ It works as follows:
 
 Each such proof is the parse tree for that statement's expression.
 
-As far as I can see, this works for set.mm and iset.mm.
+As far as I can see, this works for all of current set.mm and iset.mm.
 
 
 # How to use

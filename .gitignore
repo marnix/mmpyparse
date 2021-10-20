@@ -1,4 +1,9 @@
 /the-venv
+*.mm
+
+
+.*~
+.*.swp
 
 #### the rest was happily copied from
 #### https://raw.githubusercontent.com/github/gitignore/master/Python.gitignore

@@ -1,8 +1,8 @@
-*** set.mm	2021-10-06 09:24:36.353718200 +0200
---- set.mm	2021-10-20 17:28:30.443844400 +0200
+*** iset.mm	2021-10-20 17:47:14.148746900 +0200
+--- iset.mm	2021-10-20 17:50:22.193298400 +0200
 ***************
-*** 12472,12477 ****
---- 12472,12479 ----
+*** 345,350 ****
+--- 345,352 ----
 
   $)
 
@@ -12,11 +12,11 @@
     $c ( $.  $( Left parenthesis $)
     $c ) $.  $( Right parenthesis $)
 ***************
-*** 12491,12496 ****
---- 12493,12505 ----
-      syntax '|-' as 'wff';
-      unambiguous 'klr 5';
-    $)
+*** 355,360 ****
+--- 357,369 ----
+    $c |- $. $( Turnstile (read:  "the following symbol sequence is provable" or
+                'a proof exists for") $)
+
 +   ${
 +     $v ph $.
 +     wph.TOP $f wff ph $.
@@ -24,12 +24,22 @@
 +     TOP.turnstile $a TOP |- ph $.
 +   $}
 +
-
     $( Declare typographical constant symbols that are not directly used
        in the formalism, but *are* symbols we find useful when
+       explaining the formalism. It is much easier to consistently use
 ***************
-*** 23427,23432 ****
---- 23436,23447 ----
+*** 530,535 ****
+--- 539,545 ----
+       Postulate the modus ponens rule of inference.
+    $)
+
++
+    ${
+      $( Minor premise for modus ponens. $)
+      min $e |- ph $.
+***************
+*** 9291,9296 ****
+--- 9301,9312 ----
 
     $( Add 'setvar' as a typecode for bound variables. $)
     $( $j syntax 'setvar'; bound 'setvar'; $)
@@ -43,8 +53,8 @@
     ${
       $v x $.
 ***************
-*** 23466,23471 ****
---- 23481,23491 ----
+*** 9328,9333 ****
+--- 9344,9354 ----
 
     $( Add 'class' as a typecode. $)
     $( $j syntax 'class'; $)

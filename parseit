@@ -1,0 +1,5 @@
+#!/bin/bash -e
+python3 -m venv the-venv
+source the-venv/bin/activate
+pip3 install --quiet -r requirements.txt
+exec python3 parseit.py "$@"

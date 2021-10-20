@@ -1,0 +1,1 @@
+type_docopt == 0.8.2

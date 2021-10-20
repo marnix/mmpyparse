@@ -1,5 +1,6 @@
 **Warning: Hacked-up code ahead.**  (But it seems to work...)
 
+
 # What it does
 
 This demonstrates an idea which I posted about several times
@@ -38,6 +39,9 @@ for example by applying set.mm.patch.
 
 Run `parseit`, for example `./parseit -i set.mm`.
 (This creates a virtual environment.)
+(The `parseit` bash script is for UNIX-y systems.
+On other systems, run the equivalent manually,
+with or without using a Python virtual environment.)
 
 Enjoy the parsed formulas rolling over your screen.
 (And observe how statements like `opelopabt`
